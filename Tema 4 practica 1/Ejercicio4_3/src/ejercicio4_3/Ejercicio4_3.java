@@ -20,11 +20,12 @@ public class Ejercicio4_3 {
         char [] abecedario =new char[25];
         int x;
         String cadena="";
+        
         for(x=0;x<abecedario.length;x++){
                abecedario[x]=(char)('A' + x);
         }   
          cadena= entradadatos(abecedario);
-         JOptionPane.showMessageDialog(null,cadena);
+         JOptionPane.showMessageDialog(null,"La cadena resultante es: " + cadena);
         
         
     }
@@ -33,7 +34,7 @@ public class Ejercicio4_3 {
         int j=0;
         do{
             try{
-             j=Integer.parseInt(JOptionPane.showInputDialog("Introduce un numero"));
+             j=Integer.parseInt(JOptionPane.showInputDialog("Introduce una posición \n" + "Teclea -1 para acabar"));
             if (j>25){
                 throw new Novalida();
             }if(j!=-1)
@@ -41,18 +42,19 @@ public class Ejercicio4_3 {
              cadena += abecedario[j];    
         
                         
-            }catch (Novalida e){
-                    JOptionPane.showMessageDialog(null,"El numero no es valido");
-                    }
-        catch(ArrayIndexOutOfBoundsException e){
-            JOptionPane.showMessageDialog(null,"El numero no es valido");
-        }
-         catch(NullPointerException e){
-             JOptionPane.showMessageDialog(null,"El numero no es valido");
-         }
+            }
+            catch (Novalida e){
+            JOptionPane.showMessageDialog(null,"La posicion no es valido");
+            }
+            catch(ArrayIndexOutOfBoundsException e){
+            JOptionPane.showMessageDialog(null,"La posicion no es valido");
+            }
+            catch(NumberFormatException e){
+             JOptionPane.showMessageDialog(null,"Debes introducir una posicion o escribir -1 para finalizar");
+            }
             catch(Exception e){
-               JOptionPane.showMessageDialog(null,"El numero no es valido" + e.getMessage() + e.getClass());
-               }
+            JOptionPane.showMessageDialog(null,"La posicion no es valido" + e.getMessage() + e.getClass());
+            }
         }while(j!=-1);
         return cadena;
      

@@ -19,26 +19,25 @@ public class Ejercicio4_1 {
       public static void main(String[] args) {
        double[] array = new double[10];
       
-        array[0] = Double.parseDouble(JOptionPane.showInputDialog("introduce un numero"));
-          double maximo = array[0];
-          double minimo = array[0];
-
-//for para pedir todos los valores de nuestro array
+        array[0] = Double.parseDouble(JOptionPane.showInputDialog("Introduce un numero"));
+        double maximo = array[0];
+        double minimo = array[0];
       
       for(int x=1; x<array.length; x++)
        {
-          array[x] = Double.parseDouble(JOptionPane.showInputDialog("introduce un numero"));
+          array[x] = Double.parseDouble(JOptionPane.showInputDialog("Introduce un numero"));
+          
           if(array[x]>maximo)
           {
               maximo = array[x];
           }
-          else
-              if(array[x]<minimo)
+          else if(array[x]<minimo)
               {
-                  minimo = array[x];
+                minimo = array[x];
               }
        }
-      JOptionPane.showMessageDialog(null, "el máximo es "+maximo+" y el mínimo es "+minimo);
+      
+      JOptionPane.showMessageDialog(null, "El numero máximo es "+maximo+" y el numero mínimo es "+minimo);
     }
     
 }
