@@ -35,8 +35,8 @@ public class Empleado extends Persona{
         this.sueldo_bruto = sueldo_bruto;
     }
 
-   /* @Override??*/
-    public String mostrar(){
+  @Override
+    public String toString(){
        return this.getNombre() + " " + this.getEdad() + " " + this.getSueldo_bruto();
 
     

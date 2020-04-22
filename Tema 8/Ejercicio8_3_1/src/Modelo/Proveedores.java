@@ -3,22 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package MisClases;
+package Modelo;
 
 /**
  *
  * @author Rosita
  */
-public class Persona {
+public class Proveedores {
+    
     private String nombre;
-    private int edad;
 
-    public Persona() {
+    public Proveedores() {
     }
 
-    public Persona(String nombre, int edad) {
+    public Proveedores(String nombre) {
         this.nombre = nombre;
-        this.edad = edad;
     }
 
     public String getNombre() {
@@ -28,20 +27,6 @@ public class Persona {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    @Override
-    public String toString() {
-        return "Persona" + "nombre=" + nombre + ", edad=" + edad + '}';
-    }
-    
     
     
     

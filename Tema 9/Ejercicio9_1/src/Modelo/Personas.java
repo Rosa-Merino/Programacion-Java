@@ -3,23 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package MisClases;
+package Modelo;
 
 /**
  *
  * @author Rosita
  */
-public class Persona {
+public class Personas {
+    
     private String nombre;
     private int edad;
+    private String profesion;
+    private String telefono;
 
-    public Persona() {
-    }
-
-    public Persona(String nombre, int edad) {
+    public Personas(String nombre, int edad, String profesion, String telefono) {
         this.nombre = nombre;
         this.edad = edad;
+        this.profesion = profesion;
+        this.telefono = telefono;
     }
+
+    public Personas() {
+    }
+
+   
 
     public String getNombre() {
         return nombre;
@@ -37,11 +44,21 @@ public class Persona {
         this.edad = edad;
     }
 
-    @Override
-    public String toString() {
-        return "Persona" + "nombre=" + nombre + ", edad=" + edad + '}';
+    public String getProfesion() {
+        return profesion;
     }
-    
+
+    public void setProfesion(String profesion) {
+        this.profesion = profesion;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
     
     
     
